@@ -1,11 +1,11 @@
 import React from "react";
 import { useStateValue } from "./StateProvider";
 import "./Product.css";
+import { Link } from "react-router-dom";
 
-function Product({ id, title, price, rating, image }) {
+function Product({ id, title, price, rating, image, category }) {
   const [{ basket }, dispatch] = useStateValue();
 
-  console.log(basket);
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
@@ -20,7 +20,9 @@ function Product({ id, title, price, rating, image }) {
   };
   return (
     <div className="product">
-      <img className="checkoutProduct__image" src={image} alt="furniture" />
+      <Link to={`/product/${category}/${id}`}>
+        <img className="checkoutProduct__image" src={image} alt="furniture" />
+      </Link>
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
@@ -35,8 +37,10 @@ function Product({ id, title, price, rating, image }) {
             ))}
         </div>
       </div>
-
-      <button onClick={addToBasket}>Add to basket</button>
+      <div className="product__buttons__wrapper">
+        <button onClick={addToBasket}>Add to basket</button>
+        <button>Sprawdz produkt</button>
+      </div>
     </div>
   );
 }

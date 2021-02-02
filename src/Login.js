@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import img from "./img/toa-heftiba-FV3GConVSss-unsplash.jpg";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 
 import "./Login.css";
 
@@ -34,10 +34,6 @@ function Login() {
 
   return (
     <div className="login">
-      <Link to="/">
-        <img className="login__logo" src={img} alt="furniture" />
-      </Link>
-
       <div className="login__container">
         <h1>Sign-in</h1>
         <form>

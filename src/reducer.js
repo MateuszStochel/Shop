@@ -1,6 +1,9 @@
+import { products } from "./productsInitialState";
+
 export const initialState = {
   basket: [],
   user: null,
+  products,
 };
 
 export const getBasketTotal = (basket) =>

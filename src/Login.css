@@ -15,8 +15,9 @@
   width: 300px;
   display: flex;
   flex-direction: column;
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
   padding: 20px;
+  margin-top: 30px;
 }
 
 .login__container > h1 {
@@ -55,4 +56,5 @@
   height: 30px;
   border: 1px solid black;
   margin-top: 10px;
+  margin-bottom: 30px;
 }

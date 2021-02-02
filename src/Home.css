@@ -4,22 +4,43 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1500px;
+  position: relative;
 }
 .home__row {
-  display: flex;
   z-index: 1;
   margin-left: 5px;
   margin-right: 5px;
+  display: flex;
 }
 .home__image {
   width: 100%;
   z-index: -1;
-  margin-bottom: -150px;
   height: 600px;
   object-fit: cover;
-  mask-image: linear-gradient(
-    to top,
-    rgba(221, 202, 202, 1),
-    rgba(0, 0, 0, 0.1)
-  );
+}
+
+.home__mainTitles {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+}
+
+.home__mainTitles h2 {
+  font-size: 60px;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+.home__mainTitles h3 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+.home__row__title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  padding: 10px;
 }
