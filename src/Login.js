@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import img from "./img/toa-heftiba-FV3GConVSss-unsplash.jpg";
-import { auth } from "../firebase";
+import { auth } from "./firebase";
 
 import "./Login.css";
 

@@ -5,8 +5,10 @@ import Home from "./Home";
 import Header from "./Header";
 import Checkout from "./Checkout";
 import Login from "./Login";
-import { auth } from "../firebase";
+import { auth } from "./firebase";
 import Item from "./Item";
+import Shop from "./Shop";
+import Footer from "./Footer";
 
 import "./App.css";
 import { useStateValue } from "./StateProvider";
@@ -27,6 +29,9 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
+          <Route path="/shop">
+            <Shop />
+          </Route>
           <Route path="/product/:category/:id">
             <Item />
           </Route>
@@ -40,6 +45,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

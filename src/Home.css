@@ -3,9 +3,10 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1500px;
+  max-width: 1600px;
   position: relative;
 }
+
 .home__row {
   z-index: 1;
   margin-left: 5px;
@@ -15,8 +16,9 @@
 .home__image {
   width: 100%;
   z-index: -1;
-  height: 600px;
+  height: 700px;
   object-fit: cover;
+  object-position: 50% 60%;
 }
 
 .home__mainTitles {
@@ -43,4 +45,42 @@
   text-transform: uppercase;
   border-bottom: 1px solid black;
   padding: 10px;
+}
+
+.subhome__promo__image {
+  width: 80%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.subhome__row__promo {
+  display: flex;
+
+  border: 1px solid black;
+}
+.subhome__promo_text {
+  width: 20%;
+  height: 400px;
+  background-color: rgb(237, 227, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subhome__promo_text > button {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+.subhome > h3 {
+  padding: 40px 0 10px;
+  text-align: center;
+}
+
+.subhome > p {
+  margin: 0 auto;
+  width: 80%;
 }

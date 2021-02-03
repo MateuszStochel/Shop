@@ -4,10 +4,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  margin-bottom: 50px;
+  background-color: white;
   border-bottom: 1px solid black;
   padding-bottom: 4px;
-  background-color: rgb(216, 211, 211);
 }
 .header__info {
   display: flex;
@@ -22,6 +21,7 @@ a {
 
 .header__nav {
   display: flex;
+
   align-items: center;
   margin-bottom: 1px solid black;
 }
@@ -48,11 +48,26 @@ a {
   text-decoration: none;
   color: black;
 }
+.header span {
+  font-size: 20px;
+  font-weight: 700;
+}
 .header__title {
-  margin: 0 200px 0 20px;
+  border: 2px solid red;
+  color: red;
+  margin-left: 20px;
+  transform: rotate(-4deg);
+  padding: 4px;
+  border-right: none;
+  margin: 6px 0 6px 6px;
+}
+.header__title2 {
   border: 2px solid black;
-  padding: 0 10px;
-  margin-right: 300px;
+  color: black;
+  transform: rotate(-4deg);
+  padding: 4px;
+  border-left: none;
+  margin: 0;
 }
 
 .header__nav__wrapper {
@@ -60,4 +75,29 @@ a {
   width: 500px;
   justify-content: space-around;
   align-items: center;
+}
+
+.dropdown {
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: white;
+  border-radius: 2px;
+  overflow: hidden;
+
+  padding: 1rem;
+}
+
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-top: solid 1px black;
+
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+.menu-item:hover {
+  background-color: #525357;
 }

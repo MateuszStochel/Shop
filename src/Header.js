@@ -6,7 +6,7 @@ import { useStateValue } from "./StateProvider";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 import "./Header.css";
-import { auth } from "../firebase";
+import { auth } from "./firebase";
 
 const Header = () => {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -20,7 +20,9 @@ const Header = () => {
     <div className="header">
       <div className="header__nav">
         <h1 className="header__title">WOMEN</h1>
-        <div className="header__nav__wrapper">
+        <span>&</span>
+        <h1 className="header__title2">MEN</h1>
+        <ul className="header__nav__wrapper">
           <p>Home</p>
           <p>Home</p>
           <p>About us</p>
@@ -31,7 +33,7 @@ const Header = () => {
               <span className="header__basketCounter">{basket?.length}</span>
             </div>
           </Link>
-        </div>
+        </ul>
       </div>
     </div>
   );

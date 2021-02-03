@@ -29,17 +29,10 @@ function Product({ id, title, price, rating, image, category }) {
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        <div className="product__rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <p>*</p>
-            ))}
-        </div>
       </div>
       <div className="product__buttons__wrapper">
         <button onClick={addToBasket}>Add to basket</button>
-        <button>Sprawdz produkt</button>
+        <Link to={`/product/${category}/${id}`}>Sprawdz produkt</Link>
       </div>
     </div>
   );

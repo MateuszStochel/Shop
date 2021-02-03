@@ -5,7 +5,7 @@ import shirtblue from "./img/poloblue.png";
 
 export const products = [
   {
-    collection: [
+    Koszulki: [
       {
         title: "The lean startup",
         price: 39.99,
@@ -35,7 +35,7 @@ export const products = [
         image: shirtblue,
       },
     ],
-    promo: [
+    Bluzy: [
       {
         title: "The lean startup",
         price: 39.99,
@@ -58,7 +58,119 @@ export const products = [
         image: "hey",
       },
     ],
-    checkout: [
+    Garnitury: [
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+    ],
+
+    Bluzki: [
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+    ],
+    Spodnie: [
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+    ],
+    Sukienki: [
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
+      {
+        title: "The lean startup",
+        price: 39.99,
+        id: 333,
+        rating: 3,
+        image: "hey",
+      },
       {
         title: "The lean startup",
         price: 39.99,
