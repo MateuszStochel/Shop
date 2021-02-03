@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import { products } from "./productsInitialState";
 
 export const initialState = {

@@ -8,14 +8,17 @@ function Item() {
   const [{ basket, products }, dispatch] = useStateValue();
   let { category } = useParams();
   let { id } = useParams();
+  console.log(typeof id);
 
-  console.log(category, id);
+  const getItem = products[0][category]
+    .map((prod) => prod)
+    .find((prod) => prod.id === +id);
+
   return (
     <div className="item">
-      <h1 className="item__title"></h1>
       <div className="item__left__right">
         <div className="item__left">
-          <div className="image"></div>
+          <img src={getItem.image} className="image" alt={getItem.title} />
           <div className="item__options">
             <div></div>
             <div></div>
@@ -33,13 +36,13 @@ function Item() {
           </p>
           <div className="item__price">
             <span>Cena:</span>
-            <span>140 PLN</span>
+            <span>{getItem.price} PLN</span>
           </div>
           <div className="item__colour">
             <p>Kolor</p>
             <select name="Colour">
-              <option value="white">White</option>
-              <option value="red">Red</option>
+              <option value="white">Bialy</option>
+              <option value="red">Czerwony</option>
             </select>
           </div>
           <div className="item__size">
@@ -49,7 +52,7 @@ function Item() {
               <option value="xxl">XXL</option>
             </select>
           </div>
-          <button className="item__button">Dodaj</button>
+          <button className="item__button">Dodaj do koszyka</button>
         </div>
       </div>
     </div>

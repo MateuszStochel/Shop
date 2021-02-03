@@ -29,9 +29,8 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/shop">
-            <Shop />
-          </Route>
+          <Route path="/shop" render={(props) => <Shop {...props} />} />
+
           <Route path="/product/:category/:id">
             <Item />
           </Route>

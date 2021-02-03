@@ -1,9 +1,11 @@
+.item {
+  margin-top: 40px;
+}
 .item__title {
   text-align: center;
 }
 
 .image {
-  background-color: red;
   width: 400px;
   margin-top: 50px;
   height: 400px;
