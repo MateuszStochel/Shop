@@ -34,6 +34,11 @@ function Login() {
 
   return (
     <div className="login">
+      <div className="login_22">
+        <h1 className="header__title">WOMEN</h1>
+        <span>&</span>
+        <h1 className="header__title2">MEN</h1>
+      </div>
       <div className="login__container">
         <h1>Sign-in</h1>
         <form>

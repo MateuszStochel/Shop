@@ -10,7 +10,11 @@
   width: 100px;
   height: 100px;
 }
-
+.login_22 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .login__container {
   width: 300px;
   display: flex;

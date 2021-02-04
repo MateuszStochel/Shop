@@ -24,7 +24,9 @@
   color: grey;
   font-size: 16px;
 }
-
+.footer__row > p {
+  color: grey;
+}
 .footer__row .MuiSvgIcon-root {
   font-size: 30px !important;
   cursor: pointer;

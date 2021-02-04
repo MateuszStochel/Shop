@@ -19,33 +19,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="header__nav">
-        <h1 className="header__title">WOMEN</h1>
-        <span>&</span>
-        <h1 className="header__title2">MEN</h1>
-        <ul className="header__nav__wrapper">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/shop">Shop</Link>
-          </li>
-          <li>
-            <Link to="/">Login</Link>
-          </li>
-          <li>
-            <Link to="/checkout">
-              <div className="header__optionBasket">
-                <ShoppingBasketIcon />
-                <span className="header__basketCounter">{basket?.length}</span>
-              </div>
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <div className="header__nav"></div>
     </div>
   );
 };

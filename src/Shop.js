@@ -77,7 +77,6 @@ function Shop(props) {
   };
 
   const hey = products.map((categories) => {
-    console.log(categories);
     return (
       <>
         {Array(6)

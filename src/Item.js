@@ -19,21 +19,10 @@ function Item() {
       <div className="item__left__right">
         <div className="item__left">
           <img src={getItem.image} className="image" alt={getItem.title} />
-          <div className="item__options">
-            <div></div>
-            <div></div>
-          </div>
         </div>
         <div className="item__right">
-          <h1>Przykladowa Bluza</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quo
-            sapi ente excepturi doloremque quos beatae ea repudiandae deleniti
-            tempora ipsum aspernatur dolorum nihil dignissimos modi et soluta
-            amet, quasi possimus iste optio ullam quae dolores? Ab mollitia quam
-            qui v oluptates perspiciatis ipsa, id maxime nesciunt tempora
-            corrupti, itaque iste officia!
-          </p>
+          <h1>{getItem.title}</h1>
+          <p>{getItem.info}</p>
           <div className="item__price">
             <span>Cena:</span>
             <span>{getItem.price} PLN</span>

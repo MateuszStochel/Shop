@@ -1,12 +1,9 @@
 .product {
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  justify-content: flex-end;
-  margin: 10px;
-  padding: 20px;
   width: 100%;
+  margin-bottom: 50px;
   max-height: 400px;
   min-width: 100px;
   background-color: white;
@@ -17,144 +14,26 @@
   height: 100px;
   margin-bottom: 15px;
 }
-
-.product__rating {
-  display: flex;
+.product__info > p {
+  text-align: center;
 }
-
-.product > a > img {
+.checkoutProduct__image {
   max-height: 200px;
   width: 100%;
   object-fit: contain;
-  margin-bottom: 15px;
 }
-
-.product > button {
-  background: orange;
-  border: 1px solid;
-  margin-top: 10px;
-  border-color: olivedrab;
-  border-radius: 10px;
+small {
+  font-weight: bold;
 }
-
-.card {
-  background-color: rgb(156, 153, 153);
-  border: 2px solid black;
-  border-radius: 20px;
-  width: 320px;
-  height: 350px;
-  position: relative;
-  margin-right: 20px;
-}
-.card img {
-  width: 60%;
-}
-
-.card:after {
-  content: "prom";
-  position: absolute;
-  top: 30%;
-  left: -20%;
-  font-size: 12em;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.1);
-}
-
-.imgBx img {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 270px;
-}
-.contentBx {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  transition: 0.2s;
-  z-index: 10;
-}
-
-.card:hover .contentBx {
-  height: 120px;
-}
-
-.contentBx h2 {
-  position: relative;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #fff;
-}
-
-.contentBx .size,
-.color {
+.product__buttons__wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2px 20px;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
+  flex-direction: column;
 }
-.card:hover .size,
-.card:hover .color {
-  opacity: 1;
-  visibility: visible;
-}
-.size h3,
-.color h3 {
-  color: #fff;
-  font-weight: 300;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-right: 10px;
-  letter-spacing: 2px;
-}
-
-.size span {
-  width: 26px;
-  height: 26px;
-  text-align: center;
-  line-height: 26px;
-  font-size: 14px;
-  display: inline-block;
-  color: #111;
-  background: #fff;
-  margin: 0 5px;
-  transition: 0.5s;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.color span {
-  width: 20px;
-  height: 20px;
-  background: #ff0;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-.color span:nth-child(2) {
-  background: red;
-}
-.color span:nth-child(3) {
-  background: green;
-}
-
-.container button {
-  border: 2px solid white;
-  border-radius: 20px;
-  padding: 10px 20px;
-  background-color: green;
-  margin-left: 30px;
-}
-
 .product__buttons__wrapper > button,
 .product__buttons__wrapper > a {
   background-color: black;
   cursor: pointer;
+  margin-bottom: 4px;
   border: 2px solid black;
   padding: 10px 15px;
   font-size: 16px;
@@ -163,5 +42,28 @@
 .product__buttons__wrapper > button:nth-child(1) {
   margin-right: 20px;
 }
-.product__buttons__wrapper > a {
+
+@media (min-width: 600px) {
+  .product {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .product__buttons__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product {
+    width: 33%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product {
+    width: 25%;
+  }
 }

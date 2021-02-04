@@ -7,12 +7,20 @@
   margin-left: 5px;
   margin-right: 5px;
   display: flex;
+  flex-direction: column;
 }
 
 .shop__row__title {
   text-align: center;
   margin-top: 50px;
-  font-size: 40px;
+  font-size: 30px;
   text-transform: uppercase;
   padding: 10px;
+}
+
+@media (min-width: 600px) {
+  .shop__row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
