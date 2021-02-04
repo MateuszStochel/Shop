@@ -4,6 +4,7 @@ import { parse } from "query-string";
 import { useHistory } from "react-router-dom";
 import Product from "./Product";
 import Filter from "./Filter.js";
+import "./Shop.css";
 const categoryField = [
   "Koszulki",
   "Bluzy",
@@ -84,8 +85,8 @@ function Shop(props) {
           .map((_, i) => {
             return (
               <>
-                <h2 className="home__row__title">{categoryField[i]}</h2>
-                <div className="home__row">
+                <h2 className="shop__row__title">{categoryField[i]}</h2>
+                <div className="shop__row">
                   {categories[categoryField[i]].map((product) => (
                     <Product
                       category={categoryField[i]}
@@ -105,13 +106,13 @@ function Shop(props) {
   });
 
   return (
-    <div>
+    <div className="shop">
       <Filter />
       {selectedCategory === wszystkie && hey}
       {selectedCategory !== wszystkie && (
         <>
-          <h2 className="home__row__title">{selectedCategory}</h2>
-          <div className="home__row">{renderFilteredProducts()}</div>
+          <h2 className="shop__row__title">{selectedCategory}</h2>
+          <div className="shop__row">{renderFilteredProducts()}</div>
         </>
       )}
     </div>

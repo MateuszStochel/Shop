@@ -1,85 +1,17 @@
 .home {
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 1600px;
-  position: relative;
 }
 
-.home__row {
-  z-index: 1;
-  margin-left: 5px;
-  margin-right: 5px;
-  display: flex;
-}
 .home__image {
   width: 100%;
   z-index: -1;
   height: 700px;
   object-fit: cover;
-  object-position: 50% 60%;
 }
 
-.home__mainTitles {
-  position: absolute;
-  top: 10px;
-  left: 200px;
-}
-
-.home__mainTitles h2 {
-  font-size: 60px;
-  color: white;
-  text-shadow: 0 0 10px black;
-}
-.home__mainTitles h3 {
-  font-size: 50px;
-  color: white;
-  text-shadow: 0 0 10px black;
-}
-
-.home__row__title {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 40px;
-  text-transform: uppercase;
-  padding: 10px;
-}
-
-.subhome__promo__image {
-  width: 80%;
-  height: 400px;
-  object-fit: cover;
-}
-
-.subhome__row__promo {
-  display: flex;
-
-  border: 1px solid black;
-}
-.subhome__promo_text {
-  width: 20%;
-  height: 400px;
-  background-color: rgb(237, 227, 238);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.subhome__promo_text > button {
-  padding: 5px 10px;
-  font-size: 20px;
-  background-color: black;
-  color: white;
-  border: 2px solid black;
-}
-.subhome > h3 {
-  padding: 40px 0 10px;
-  text-align: center;
-}
-
-.subhome > p {
-  margin: 0 auto;
-  width: 80%;
+@media (max-width: 600px) {
+  .home__image {
+    height: 500px;
+  }
 }

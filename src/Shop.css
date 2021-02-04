@@ -1,0 +1,18 @@
+.shop {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.shop__row {
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+}
+
+.shop__row__title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+  padding: 10px;
+}

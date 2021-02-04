@@ -10,6 +10,7 @@ import { auth } from "./firebase";
 
 const Header = () => {
   const [{ basket, user }, dispatch] = useStateValue();
+
   const handleAuthentication = () => {
     if (user) {
       auth.signOut();
@@ -23,16 +24,26 @@ const Header = () => {
         <span>&</span>
         <h1 className="header__title2">MEN</h1>
         <ul className="header__nav__wrapper">
-          <p>Home</p>
-          <p>Home</p>
-          <p>About us</p>
-          <p>Contact us</p>
-          <Link to="/checkout">
-            <div className="header__optionBasket">
-              <ShoppingBasketIcon />
-              <span className="header__basketCounter">{basket?.length}</span>
-            </div>
-          </Link>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/shop">Shop</Link>
+          </li>
+          <li>
+            <Link to="/">Login</Link>
+          </li>
+          <li>
+            <Link to="/checkout">
+              <div className="header__optionBasket">
+                <ShoppingBasketIcon />
+                <span className="header__basketCounter">{basket?.length}</span>
+              </div>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -5,11 +5,14 @@
   max-width: 1500px;
   margin: 0 auto;
 }
+.checkout__left {
+  width: 100%;
+}
 .checkout__banner {
   height: 100px;
-  background-color: black;
+  background-color: rgb(219, 202, 202);
   text-align: center;
-  color: white;
+  color: red;
   line-height: 100px;
   font-size: 60px;
 }

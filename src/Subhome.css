@@ -15,6 +15,10 @@
   justify-content: center;
   height: 600px;
 }
+.subhome__row:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
 
 .subhome__row > img {
   width: 99%;
@@ -22,10 +26,7 @@
   object-fit: cover;
   z-index: -1;
 }
-.subhome__row:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
+
 .subhome__row__info {
   position: absolute;
   top: 40%;
@@ -41,7 +42,6 @@
   font-weight: 300;
   margin-bottom: 10px;
 }
-
 .subhome__wrap__button {
   text-align: center;
 }
@@ -53,4 +53,153 @@
   background-color: white;
   border: 2px solid black;
   box-shadow: 0 0 2px black;
+}
+
+.subhome__promo__image {
+  width: 80%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.subhome__row__promo {
+  display: flex;
+  border: 1px solid black;
+}
+.subhome__promo_text {
+  width: 20%;
+  height: 400px;
+  background-color: rgb(237, 227, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subhome__promo_text > button {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+.subhome > h3 {
+  padding: 40px 0 10px;
+  text-align: center;
+}
+
+.subhome > p {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .subhome__main__title {
+    font-size: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+  .subhome__container {
+    flex-direction: column;
+  }
+  .subhome__row__info > h1 {
+    font-size: 45px;
+  }
+  .subhome__row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+  }
+  .subhome__row > img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .subhome__wrap__button > button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+  .subhome__promo__image {
+    height: 200px;
+  }
+
+  .subhome__row__promo {
+    flex-direction: column;
+    align-items: center;
+    border: none;
+  }
+  .subhome__promo_text {
+    width: 80%;
+    height: 200px;
+    flex-direction: column;
+  }
+
+  .subhome__promo_text > button {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+
+  .subhome > h3 {
+    margin: 0 auto;
+  }
+
+  .subhome > p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .subhome__main__title {
+    font-size: 50px;
+  }
+  .subhome__container {
+    flex-direction: column;
+  }
+  .subhome__row__info > h1 {
+    font-size: 65px;
+  }
+  .subhome__row {
+    height: 600px;
+  }
+  .subhome__row > img {
+    width: 70%;
+  }
+  .subhome__wrap__button > button {
+    font-size: 25px;
+    padding: 15px 22.5px;
+  }
+  .subhome__row__promo {
+    flex-direction: column;
+    align-items: center;
+    border: none;
+  }
+  .subhome__promo_text {
+    width: 80%;
+    height: 300px;
+  }
+  .subhome__promo__image {
+    height: 300px;
+  }
+  .subhome__promo_text > button {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .subhome__row__info > h1 {
+    font-size: 45px;
+  }
+  .subhome__wrap__button > button {
+    font-size: 20px;
+    padding: 15px 22.5px;
+  }
+  .subhome__promo__image {
+    width: 70%;
+  }
+  .subhome__promo_text {
+    width: 30%;
+  }
 }

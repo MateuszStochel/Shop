@@ -42,9 +42,9 @@ function App() {
           </Route>
           <Route path="/">
             <Home />
+            <Footer />
           </Route>
         </Switch>
-        <Footer />
       </div>
     </Router>
   );
