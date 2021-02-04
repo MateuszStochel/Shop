@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { useStateValue } from "./StateProvider";
-import { parse } from "query-string";
+import { useStateValue } from "../../../App/StateProvider";
 import { useHistory } from "react-router-dom";
-import Product from "./Product";
-import Filter from "./Filter.js";
-import "./Shop.css";
+
+import { parse } from "query-string";
+
+import Product from "../Components/Products/Product";
+import Filter from "../Components/Filters/Filter.js";
+
+import "../Components/Shop.css";
+
 const categoryField = [
   "Koszulki",
   "Bluzy",

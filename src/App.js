@@ -1,17 +1,19 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "./Home";
-import Header from "./Header";
-import Checkout from "./Checkout";
-import Login from "./Login";
 import { auth } from "./firebase";
-import Item from "./Item";
-import Shop from "./Shop";
-import Footer from "./Footer";
+import { useStateValue } from "./App/StateProvider";
+
+import Home from "./domain/Home/Pages/Home";
+import Header from "./App/Header";
+import Checkout from "./domain/Checkout/Pages/Checkout";
+import Login from "./Login";
+import Item from "./domain/Shop/Pages/ItemDetails";
+import Shop from "./domain/Shop/Pages/Shop";
+import Footer from "./App/Footer";
+import Payment from "./Payment";
 
 import "./App.css";
-import { useStateValue } from "./StateProvider";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -30,12 +32,14 @@ function App() {
         <Header />
         <Switch>
           <Route path="/shop" render={(props) => <Shop {...props} />} />
-
           <Route path="/product/:category/:id">
             <Item />
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/payment">
+            <Payment />
           </Route>
           <Route path="/checkout">
             <Checkout />

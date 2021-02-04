@@ -1,30 +1,31 @@
 import React from "react";
-import img from "./img/faith-yarn-hgtWvsq5e2c-unsplash.jpg";
-import img2 from "./img/ussama-azam-xgNSlx7DjYM-unsplash.jpg";
-import img3 from "./img/vladimir-fedotov-MPfyh3xJ1iE-unsplash.jpg";
-function SubHomeWomen() {
+
+import img4 from "../../../../img/javier-reyes-qi2cD5oR_fE-unsplash.jpg";
+import img5 from "../../../../img/mubariz-mehdizadeh-o-wlIFT4zE4-unsplash (1).jpg";
+import img6 from "../../../../img/karsten-winegeart-pFK8FlbBtts-unsplash.jpg";
+function SubHomeMen() {
   return (
     <>
-      <h2 className="subhome__main__title">Moda Damska</h2>
+      <h2 className="subhome__main__title">Moda Meska</h2>
       <div className="subhome__container">
         <div className="subhome__row">
-          <img src={img} alt="top" />
+          <img src={img4} alt="suits" />
           <div className="subhome__row__info">
-            <h1>Bluzki</h1>
+            <h1>Garnitury</h1>
             <p>Zobacz wiecej</p>
           </div>
         </div>
         <div className="subhome__row">
-          <img src={img2} alt="dress" />
+          <img src={img5} alt="hoodies" />
           <div className="subhome__row__info">
-            <h1>Sukienki</h1>
+            <h1>Bluzy</h1>
             <p>Zobacz wiecej</p>
           </div>
         </div>
         <div className="subhome__row">
-          <img src={img3} alt="trousers" />
+          <img src={img6} alt="T-shirt" />
           <div className="subhome__row__info">
-            <h1>Spodnie</h1>
+            <h1>Koszulki</h1>
             <p>Zobacz wiecej</p>
           </div>
         </div>
@@ -36,4 +37,4 @@ function SubHomeWomen() {
   );
 }
 
-export default SubHomeWomen;
+export default SubHomeMen;

@@ -1,8 +1,9 @@
 import React from "react";
 
-import "./Item.css";
 import { useParams } from "react-router-dom";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../../App/StateProvider";
+
+import "../Components/ItemDetails.css";
 
 function Item() {
   const [{ basket, products }, dispatch] = useStateValue();
@@ -16,6 +17,7 @@ function Item() {
 
   return (
     <div className="item">
+      <h1 className="item__main__title">Opis produktu</h1>
       <div className="item__left__right">
         <div className="item__left">
           <img src={getItem.image} className="image" alt={getItem.title} />

@@ -4,7 +4,14 @@
 .item__title {
   text-align: center;
 }
+.item__main__title {
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 20px 0;
+}
 .item__left__right {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,16 +76,9 @@
     margin-right: 200px;
   }
   .item__right > h1 {
-    margin-top: 20px;
     font-size: 30px;
-    text-align: center;
   }
 
-  .item__right > p {
-    padding: 0 20px 40px;
-    text-align: center;
-    color: grey;
-  }
   .item__right {
     max-width: 400px;
   }

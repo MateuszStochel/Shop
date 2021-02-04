@@ -1,7 +1,9 @@
 import React from "react";
-import { useStateValue } from "./StateProvider";
-import "./Product.css";
 import { Link } from "react-router-dom";
+
+import { useStateValue } from "../../../../App/StateProvider";
+
+import "./Product.css";
 
 function Product({ id, title, price, image, category }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -30,7 +32,7 @@ function Product({ id, title, price, image, category }) {
         </p>
       </div>
       <div className="product__buttons__wrapper">
-        <button onClick={addToBasket}>Add to basket</button>
+        <button onClick={addToBasket}>Dodaj do koszyka</button>
         <Link to={`/product/${category}/${id}`}>Sprawdz produkt</Link>
       </div>
     </div>

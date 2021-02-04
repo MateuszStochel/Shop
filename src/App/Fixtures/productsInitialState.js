@@ -1,19 +1,19 @@
-import img from "./img/copy_907066225.png";
-import polo from "./img/polo.png";
-import pologrey from "./img/pologrey.png";
-import shirtblue from "./img/poloblue.png";
-import jeans1 from "./img/jeans1.png";
-import jeans2 from "./img/jeans2.png";
-import jeans3 from "./img/image3.png";
-import suit1 from "./img/suit1.png";
-import suit2 from "./img/suit2.png";
-import suit3 from "./img/suit3.png";
-import dress1 from "./img/dress1.png";
-import dress2 from "./img/dress2.png";
-import dress3 from "./img/dress3.png";
-import dress4 from "./img/dress4.png";
-import shirt from "./img/Koszula.png";
-import koszulkaDamska from "./img/t-shirt.png";
+import img from "../../img/copy_907066225.png";
+import polo from "../../img/polo.png";
+import pologrey from "../../img/pologrey.png";
+import shirtblue from "../../img/poloblue.png";
+import jeans1 from "../../img/jeans1.png";
+import jeans2 from "../../img/jeans2.png";
+import jeans3 from "../../img/image3.png";
+import suit1 from "../../img/suit1.png";
+import suit2 from "../../img/suit2.png";
+import suit3 from "../../img/suit3.png";
+import dress1 from "../../img/dress1.png";
+import dress2 from "../../img/dress2.png";
+import dress3 from "../../img/dress3.png";
+import dress4 from "../../img/dress4.png";
+import shirt from "../../img/Koszula.png";
+import koszulkaDamska from "../../img/t-shirt.png";
 
 export const products = [
   {

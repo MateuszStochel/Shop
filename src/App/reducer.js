@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { products } from "./productsInitialState";
+import { products } from "./Fixtures/productsInitialState";
 
 export const initialState = {
   basket: [],

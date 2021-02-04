@@ -1,7 +1,6 @@
 import React from "react";
-import img from "./img/tamanna-rumee-9ROY8fXmTto-unsplash.jpg";
-import img2 from "./img/ussama-azam-xgNSlx7DjYM-unsplash.jpg";
-import img3 from "./img/vladimir-fedotov-MPfyh3xJ1iE-unsplash.jpg";
+
+import img from "../../../../img/tamanna-rumee-9ROY8fXmTto-unsplash.jpg";
 
 function SubHomePromo() {
   return (
