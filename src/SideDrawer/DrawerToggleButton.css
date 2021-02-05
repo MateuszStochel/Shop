@@ -1,0 +1,30 @@
+.drawerToggleButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+  padding: 0;
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+}
+.drawerToggleButton:focus {
+  outline: none;
+}
+
+.drawerToggleButton__line {
+  width: 30px;
+  height: 2px;
+  background: black;
+}
+
+.drawerToggleButton__line:nth-child(1) {
+  width: 20px;
+  height: 2px;
+}
+
+.drawerToggleButton__line:nth-child(2) {
+  width: 25px;
+}

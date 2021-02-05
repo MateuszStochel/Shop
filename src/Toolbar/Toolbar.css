@@ -1,0 +1,102 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 0 3px;
+  z-index: 2;
+}
+.toolbar__navigation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.toolbar__logo {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar__title__left {
+  border: 2px solid red;
+  color: red;
+  font-size: 30px;
+  margin-left: 20px;
+  transform: rotate(-4deg);
+  padding: 4px;
+  border-right: none;
+  margin: 6px 0 6px 6px;
+}
+.toolbar__title__right {
+  border: 2px solid black;
+  color: black;
+  font-size: 30px;
+  transform: rotate(-4deg);
+  padding: 4px;
+  border-left: none;
+  margin: 0;
+}
+
+.toolbar__navigation__link {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+.toolbar__navigation__items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.toolbar__navigation__items li {
+  padding: 0 1.5rem;
+}
+
+.toolbar__navigation__items a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.toolbar__navigation__link a.active {
+  color: red;
+}
+.toolbar__optionBasket {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.toolbar__optionBasket > svg {
+  font-size: 25px;
+}
+
+.toolbar__optionBasket > span {
+  position: absolute;
+  color: red;
+  top: -7%;
+  font-size: 12px;
+  border-radius: 50%;
+  right: 20%;
+}
+
+@media (max-width: 768px) {
+  .toolbar__navigation__items {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .toolbar__toggle__button {
+    display: none;
+  }
+}

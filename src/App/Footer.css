@@ -23,6 +23,7 @@
 .footer__row > li > a {
   color: grey;
   font-size: 16px;
+  text-decoration: none;
 }
 .footer__row > p {
   color: grey;

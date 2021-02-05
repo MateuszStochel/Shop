@@ -50,7 +50,7 @@ const filterProducts = (products, selectedCategory) => {
 };
 
 function Shop(props) {
-  const [{ basket, user, products }, dispatch] = useStateValue();
+  const [{ products }, dispatch] = useStateValue();
   let history = useHistory();
   const [selectedCategory, setSelectedCategory] = useState(wszystkie);
   const filteredProducts = filterProducts(products, selectedCategory);

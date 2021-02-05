@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import FacebookIcon from "@material-ui/icons/Facebook";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import { Link } from "react-router-dom";
+
 import "./Footer.css";
 
 function Footer() {

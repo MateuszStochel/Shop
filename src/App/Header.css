@@ -23,23 +23,17 @@
 
 .header__optionBasket {
   display: flex;
-  align-items: center;
 }
 
-.header__basketCounter {
-  margin: 0 10px;
-  color: black;
+.header__basketCounter > span {
+  color: red;
 }
 
 a {
   text-decoration: none;
   color: black;
 }
-.header span {
-  font-size: 20px;
-  font-weight: 700;
-  color: red;
-}
+
 .header__title {
   border: 2px solid red;
   color: red;
@@ -60,7 +54,6 @@ a {
 
 .header__nav__wrapper {
   display: flex;
-  flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;

@@ -6,7 +6,7 @@ import { useStateValue } from "../../../App/StateProvider";
 import "../Components/ItemDetails.css";
 
 function Item() {
-  const [{ basket, products }, dispatch] = useStateValue();
+  const [{ products }, dispatch] = useStateValue();
   let { category } = useParams();
   let { id } = useParams();
   console.log(typeof id);
