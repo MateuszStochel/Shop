@@ -14,6 +14,7 @@ import Payment from "./Payment";
 import Login from "./Login";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import Backdrop from "./Backdrop/Backdrop";
+import ScrollToTop from "./App/Router/ScrollToTop";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -50,6 +51,7 @@ function App() {
           className={sideDrawerOpen ? "side__drawer open" : "side__drawer"}
         />
         {backdrop}
+        <ScrollToTop />
         <Switch>
           <Route path="/shop" render={(props) => <Shop {...props} />} />
           <Route path="/product/:category/:id">

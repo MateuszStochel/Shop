@@ -60,6 +60,12 @@
   padding: 10px 0;
   width: 100%;
 }
+.item__button:hover {
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
 
 @media (min-width: 600px) {
   .item__left__right {

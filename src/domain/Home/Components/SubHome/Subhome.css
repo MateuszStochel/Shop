@@ -53,6 +53,7 @@
   background-color: white;
   border: 2px solid black;
   box-shadow: 0 0 2px black;
+  cursor: pointer;
 }
 
 .subhome__promo__image {
@@ -81,6 +82,7 @@
   background-color: black;
   color: white;
   border: 2px solid black;
+  cursor: pointer;
 }
 .subhome > h3 {
   padding: 40px 0 10px;

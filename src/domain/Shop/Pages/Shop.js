@@ -50,7 +50,7 @@ const filterProducts = (products, selectedCategory) => {
 };
 
 function Shop(props) {
-  const [{ products }, dispatch] = useStateValue();
+  const [{ products }] = useStateValue();
   let history = useHistory();
   const [selectedCategory, setSelectedCategory] = useState(wszystkie);
   const filteredProducts = filterProducts(products, selectedCategory);
@@ -62,7 +62,7 @@ function Shop(props) {
     }
 
     setSelectedCategory(parse(props.location.search).kategorie);
-  }, [props.location.search, selectedCategory, history]);
+  });
 
   const renderFilteredProducts = () => {
     return filteredProducts.map((product) => {

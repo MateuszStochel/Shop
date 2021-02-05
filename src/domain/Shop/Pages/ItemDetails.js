@@ -7,6 +7,19 @@ import "../Components/ItemDetails.css";
 
 function Item() {
   const [{ products }, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: getItem.title,
+        price: getItem.price,
+        image: getItem.image,
+      },
+    });
+  };
+
   let { category } = useParams();
   let { id } = useParams();
   console.log(typeof id);
@@ -43,7 +56,9 @@ function Item() {
               <option value="xxl">XXL</option>
             </select>
           </div>
-          <button className="item__button">Dodaj do koszyka</button>
+          <button onClick={addToBasket} className="item__button">
+            Dodaj do koszyka
+          </button>
         </div>
       </div>
     </div>

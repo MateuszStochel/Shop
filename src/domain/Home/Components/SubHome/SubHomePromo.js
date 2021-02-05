@@ -1,8 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
+import { CategoryRoute } from "../../../../App/Router/CategoryRoot";
 
 import img from "../../../../img/tamanna-rumee-9ROY8fXmTto-unsplash.jpg";
 
 function SubHomePromo() {
+  const history = useHistory();
+  const onCategoryClick = (category) => {
+    history.push(CategoryRoute.resolveCategoryClothes(category));
+  };
   return (
     <>
       <div className="subhome__container">
@@ -11,7 +18,9 @@ function SubHomePromo() {
           <div className="subhome__promo_text">
             <h3>Spraw komus prezent!</h3>
             <h4>-50%</h4>
-            <button>Zobacz wiecej</button>
+            <button onClick={() => onCategoryClick(CategoryRoute.WSZYSTKIE)}>
+              Zobacz wiecej
+            </button>
           </div>
         </div>
       </div>

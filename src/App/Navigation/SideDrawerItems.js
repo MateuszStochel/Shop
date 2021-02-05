@@ -1,10 +1,10 @@
 export const navigationMenu = [
   {
-    pathUrl: "/shop",
+    pathUrl: "/",
     linkName: "Strona glowna",
   },
   {
-    pathUrl: "/shops",
+    pathUrl: "/shop?kategorie=Wszystkie",
     linkName: "Sklep",
   },
   {

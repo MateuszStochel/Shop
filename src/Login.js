@@ -34,11 +34,6 @@ function Login() {
 
   return (
     <div className="login">
-      <div className="login_22">
-        <h1 className="header__title">WOMEN</h1>
-        <span>&</span>
-        <h1 className="header__title2">MEN</h1>
-      </div>
       <div className="login__container">
         <h1>Sign-in</h1>
         <form>
@@ -62,12 +57,11 @@ function Login() {
             Sign In
           </button>
           <p>
-            By sigining-in you agree to the SHOPX Conditions of Use & Sale.
+            By sigining-in you agree to the WOMEN&MEN Conditions of Use & Sale.
             Please see our Privacy Notice, our cookies Notice and our
             Interest-Based Ads notice.
           </p>
           <button onClick={register} className="login__registerButton">
-            {" "}
             Create you account
           </button>
         </form>

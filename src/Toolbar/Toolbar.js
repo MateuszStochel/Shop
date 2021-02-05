@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import { auth } from "../firebase";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
@@ -10,7 +11,12 @@ import "./Toolbar.css";
 import { useStateValue } from "../App/StateProvider";
 
 const Toolbar = ({ drawerClickHandler }) => {
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }] = useStateValue();
+
+  const handleAuthentication = () => {
+    if (user) {
+    }
+  };
   return (
     <header className="toolbar">
       <nav className="toolbar__navigation">
@@ -25,7 +31,9 @@ const Toolbar = ({ drawerClickHandler }) => {
           <ul className="toolbar__navigation__link">
             {navigationMenu.map((nav) => (
               <li>
-                <NavLink to={nav.pathUrl}>{nav.linkName}</NavLink>
+                <NavLink exact to={nav.pathUrl}>
+                  {nav.linkName}
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -33,11 +41,13 @@ const Toolbar = ({ drawerClickHandler }) => {
         <div className="spacer" />
         <div className="toolbar__navigation__items">
           <ul className="toolbar__navigation__link">
-            <li>
-              <a href="/">Login</a>
+            <li onClick={handleAuthentication}>
+              <NavLink to="/login">{user ? "Sign out" : "Sign In"}</NavLink>
             </li>
             <li className="toolbar__optionBasket">
-              <ShoppingBasketIcon />
+              <NavLink to="/checkout">
+                <ShoppingBasketIcon />
+              </NavLink>
               <span>{basket?.length}</span>
             </li>
           </ul>
