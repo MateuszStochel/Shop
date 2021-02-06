@@ -1,12 +1,12 @@
 import React from "react";
 
 import { useParams } from "react-router-dom";
-import { useStateValue } from "../../../App/StateProvider";
+import { StateContext, useStateValue } from "../../../App/StateProvider";
 
 import "../Components/ItemDetails.css";
 
 function Item() {
-  const [{ products }, dispatch] = useStateValue();
+  const [{ products, basket }, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
@@ -22,11 +22,8 @@ function Item() {
 
   let { category } = useParams();
   let { id } = useParams();
-  console.log(typeof id);
 
-  const getItem = products[0][category]
-    .map((prod) => prod)
-    .find((prod) => prod.id === +id);
+  const getItem = products[0][category].find((prod) => prod);
 
   return (
     <div className="item">

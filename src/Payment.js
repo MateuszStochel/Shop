@@ -1,9 +1,11 @@
 import React from "react";
-import "./Payment.css";
+
 import { useStateValue } from "./App/StateProvider";
 
+import "./Payment.css";
+
 function Payment() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   const hey = basket.map((item) => console.log(item));
   return (
     <div className="payment">

@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import { products } from "./Fixtures/productsInitialState";
 
 export const initialState = {
@@ -13,12 +12,12 @@ export const getBasketTotal = (basket) => {
     0
   );
 };
+const removeProperty = (propKey, { [propKey]: propValue, ...rest }) => rest;
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_BASKET":
       if (state.basket[action.item.id]) {
-        console.log(state.basket);
         return {
           ...state,
           basket: {
@@ -40,17 +39,24 @@ const reducer = (state, action) => {
       };
 
     case "REMOVE_FROM_BASKET":
-      const index = state.basket.findIndex(
-        (basketItem) => basketItem.id === action.id
-      );
-      console.log(index);
-      let newBasket = [...state.basket];
-      if (index >= 0) {
-        newBasket.splice(index, 1);
-      } else {
-        console.warn(`cant remove product (id: ${action.id})`);
+      if (state.basket[action.id].counter > 1) {
+        return {
+          ...state,
+          basket: {
+            ...state.basket,
+            [action.id]: {
+              ...state.basket[action.id],
+              counter: state.basket[action.id].counter - 1,
+            },
+          },
+        };
       }
-      return { ...state, basket: newBasket };
+
+      const restProducts = removeProperty(action.id, state.basket);
+      return {
+        ...state,
+        basket: restProducts,
+      };
     case "SET_USER":
       return {
         ...state,

@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import { auth } from "../firebase";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
@@ -13,6 +12,10 @@ import { useStateValue } from "../App/StateProvider";
 const Toolbar = ({ drawerClickHandler }) => {
   const [{ basket, user }] = useStateValue();
 
+  const lengthOfBasket = Object.values(basket).reduce(
+    (acc, currentValue) => acc + currentValue.counter,
+    0
+  );
   const handleAuthentication = () => {
     if (user) {
     }
@@ -48,7 +51,7 @@ const Toolbar = ({ drawerClickHandler }) => {
               <NavLink to="/checkout">
                 <ShoppingBasketIcon />
               </NavLink>
-              <span>{basket?.length}</span>
+              <span>{lengthOfBasket}</span>
             </li>
           </ul>
         </div>
