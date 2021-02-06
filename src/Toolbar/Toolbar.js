@@ -8,16 +8,17 @@ import { navigationMenu } from "../App/Navigation/SideDrawerItems";
 
 import "./Toolbar.css";
 import { useStateValue } from "../App/StateProvider";
+import { auth } from "../firebase";
 
 const Toolbar = ({ drawerClickHandler }) => {
   const [{ basket, user }] = useStateValue();
-
   const lengthOfBasket = Object.values(basket).reduce(
     (acc, currentValue) => acc + currentValue.counter,
     0
   );
   const handleAuthentication = () => {
     if (user) {
+      auth.signOut();
     }
   };
   return (
@@ -32,6 +33,7 @@ const Toolbar = ({ drawerClickHandler }) => {
 
         <div className="toolbar__navigation__items">
           <ul className="toolbar__navigation__link">
+            <li></li>
             {navigationMenu.map((nav) => (
               <li>
                 <NavLink exact to={nav.pathUrl}>
@@ -45,7 +47,9 @@ const Toolbar = ({ drawerClickHandler }) => {
         <div className="toolbar__navigation__items">
           <ul className="toolbar__navigation__link">
             <li onClick={handleAuthentication}>
-              <NavLink to="/login">{user ? "Sign out" : "Sign In"}</NavLink>
+              <NavLink to={!user && "/login"}>
+                {user ? "Sign out" : "Sign In"}
+              </NavLink>
             </li>
             <li className="toolbar__optionBasket">
               <NavLink to="/checkout">

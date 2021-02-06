@@ -11,10 +11,8 @@ function Checkout() {
   return (
     <div className="checkout">
       <div className="checkout__left">
-        <div className="checkout__banner">BANNER</div>
         <div>
-          <h3>Welcome, {user?.email}</h3>
-          <h2 className="checkout__title">Your shopping Basket</h2>
+          <h2 className="checkout__title">Twoj koszyk</h2>
         </div>
         {Object.values(basket).map((item) => (
           <CheckoutProduct

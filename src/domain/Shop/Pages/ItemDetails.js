@@ -1,12 +1,19 @@
 import React from "react";
 
 import { useParams } from "react-router-dom";
-import { StateContext, useStateValue } from "../../../App/StateProvider";
+import { useStateValue } from "../../../App/StateProvider";
+import { withSnackbar } from "react-simple-snackbar";
 
 import "../Components/ItemDetails.css";
+import { options } from "../../../App/Snackbar/Snackbar";
 
-function Item() {
+function Item({ openSnackbar, closeSnackbar }) {
   const [{ products, basket }, dispatch] = useStateValue();
+
+  const addProduct = () => {
+    openSnackbar("Dodano produkt", [700]);
+    addToBasket();
+  };
 
   const addToBasket = () => {
     dispatch({
@@ -24,7 +31,6 @@ function Item() {
   let { id } = useParams();
 
   const getItem = products[0][category].find((prod) => prod);
-
   return (
     <div className="item">
       <h1 className="item__main__title">Opis produktu</h1>
@@ -53,7 +59,7 @@ function Item() {
               <option value="xxl">XXL</option>
             </select>
           </div>
-          <button onClick={addToBasket} className="item__button">
+          <button onClick={() => addProduct()} className="item__button">
             Dodaj do koszyka
           </button>
         </div>
@@ -62,4 +68,4 @@ function Item() {
   );
 }
 
-export default Item;
+export default withSnackbar(Item, options);

@@ -16,12 +16,12 @@ function Subtotal() {
       <CurrencyFormat
         renderText={(value) => (
           <>
+            <p>Produkty: {Object.values(basket).length}</p>
             <p>
-              Subtotal({Object.values(basket).length}):
-              <strong>{value}</strong>
+              Cena laczna:<strong>{value}</strong>
             </p>
             <small className="subtotal__gift">
-              <input type="checkbox" /> This order contains a gift
+              <input type="checkbox" /> Zamowienie zawiera prezent
             </small>
           </>
         )}

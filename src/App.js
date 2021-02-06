@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
+import SnackbarProvider from "react-simple-snackbar";
 import { useStateValue } from "./App/StateProvider";
 import { auth } from "./firebase";
 
@@ -43,35 +44,37 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Toolbar drawerClickHandler={drawerToggleClickHandler} />
-        <SideDrawer
-          show={sideDrawerOpen}
-          onShow={setSideDrawerOpen}
-          className={sideDrawerOpen ? "side__drawer open" : "side__drawer"}
-        />
-        {backdrop}
-        <ScrollToTop />
-        <Switch>
-          <Route path="/shop" render={(props) => <Shop {...props} />} />
-          <Route path="/product/:category/:id">
-            <Item />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/payment">
-            <Payment />
-          </Route>
-          <Route path="/checkout">
-            <Checkout />
-          </Route>
-          <Route path="/">
-            <Home />
-            <Footer />
-          </Route>
-        </Switch>
-      </div>
+      <SnackbarProvider>
+        <div className="App">
+          <Toolbar drawerClickHandler={drawerToggleClickHandler} />
+          <SideDrawer
+            show={sideDrawerOpen}
+            onShow={setSideDrawerOpen}
+            className={sideDrawerOpen ? "side__drawer open" : "side__drawer"}
+          />
+          {backdrop}
+          <ScrollToTop />
+          <Switch>
+            <Route path="/shop" render={(props) => <Shop {...props} />} />
+            <Route path="/product/:category/:id">
+              <Item />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/payment">
+              <Payment />
+            </Route>
+            <Route path="/checkout">
+              <Checkout />
+            </Route>
+            <Route path="/">
+              <Home />
+              <Footer />
+            </Route>
+          </Switch>
+        </div>
+      </SnackbarProvider>
     </Router>
   );
 }

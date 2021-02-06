@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useStateValue } from "../../../App/StateProvider";
 import { useHistory } from "react-router-dom";
 
+import { options } from "../../../App/Snackbar/Snackbar";
 import { parse } from "query-string";
+import { withSnackbar } from "react-simple-snackbar";
 
 import Product from "../Components/Products/Product";
 import Filter from "../Components/Filters/Filter.js";

@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { withSnackbar } from "react-simple-snackbar";
+import { options } from "../../../../App/Snackbar/Snackbar";
 
 import { useStateValue } from "../../../../App/StateProvider";
 
 import "./Product.css";
 
-function Product({ id, title, price, image, category }) {
+function Product({ id, title, price, image, category, openSnackbar }) {
+  const addProduct = () => {
+    openSnackbar("Dodano produkt", [700]);
+    addToBasket();
+  };
   const [{ basket }, dispatch] = useStateValue();
 
   const addToBasket = () => {
@@ -32,11 +38,11 @@ function Product({ id, title, price, image, category }) {
         </p>
       </div>
       <div className="product__buttons__wrapper">
-        <button onClick={addToBasket}>Dodaj do koszyka</button>
+        <button onClick={() => addProduct()}>Dodaj do koszyka</button>
         <Link to={`/product/${category}/${id}`}>Sprawdz produkt</Link>
       </div>
     </div>
   );
 }
 
-export default Product;
+export default withSnackbar(Product, options);
