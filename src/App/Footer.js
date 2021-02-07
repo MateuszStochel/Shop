@@ -8,7 +8,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
+    <div id="test1" className="footer">
       <div className="footer__row">
         <h3>Obsluga klienta</h3>
         <li>

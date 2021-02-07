@@ -47,6 +47,7 @@ function App() {
       <SnackbarProvider>
         <div className="App">
           <Toolbar drawerClickHandler={drawerToggleClickHandler} />
+
           <SideDrawer
             show={sideDrawerOpen}
             onShow={setSideDrawerOpen}
@@ -70,10 +71,10 @@ function App() {
             </Route>
             <Route path="/">
               <Home />
-              <Footer />
             </Route>
           </Switch>
         </div>
+        <Footer />
       </SnackbarProvider>
     </Router>
   );

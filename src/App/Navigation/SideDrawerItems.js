@@ -7,8 +7,4 @@ export const navigationMenu = [
     pathUrl: "/shop?kategorie=Wszystkie",
     linkName: "Sklep",
   },
-  {
-    pathUrl: "/shopss",
-    linkName: "Kontakt",
-  },
 ];

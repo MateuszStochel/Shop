@@ -3,6 +3,7 @@ export const options = {
   style: {
     marginTop: "80px",
   },
+
   closeStyle: {
     color: "lightcoral",
     fontSize: "16px",

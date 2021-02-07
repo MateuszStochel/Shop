@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
@@ -12,6 +13,7 @@ import { auth } from "../firebase";
 
 const Toolbar = ({ drawerClickHandler }) => {
   const [{ basket, user }] = useStateValue();
+  const history = useHistory();
   const lengthOfBasket = Object.values(basket).reduce(
     (acc, currentValue) => acc + currentValue.counter,
     0
@@ -21,6 +23,7 @@ const Toolbar = ({ drawerClickHandler }) => {
       auth.signOut();
     }
   };
+
   return (
     <header className="toolbar">
       <nav className="toolbar__navigation">
@@ -41,6 +44,17 @@ const Toolbar = ({ drawerClickHandler }) => {
                 </NavLink>
               </li>
             ))}
+
+            <Link
+              activeClass="active"
+              to="test1"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              Kontakt
+            </Link>
           </ul>
         </div>
         <div className="spacer" />

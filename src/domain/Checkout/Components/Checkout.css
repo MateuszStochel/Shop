@@ -5,6 +5,7 @@
   max-width: 1500px;
   margin: 150px auto 0;
   justify-content: center;
+  min-height: 40vh;
 }
 .checkout__left {
   width: 50%;

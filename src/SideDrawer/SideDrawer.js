@@ -27,12 +27,14 @@ const SideDrawer = ({ show, onShow, ...props }) => {
             <span>{nav.linkName}</span>
           </li>
         ))}
+        <li onClick={() => changeUrl("/shop")}>
+          <ShoppingBasketIcon />
+        </li>
         <li
-          onClick={() => changeUrl("/checkout")}
+          onClick={() => changeUrl("/login")}
           className="side__drawer__optionBasket"
         >
           <span>Login</span>
-          <ShoppingBasketIcon />
         </li>
       </ul>
     </nav>
