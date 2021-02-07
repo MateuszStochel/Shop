@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import "./Filter.css";
 
-function Filter() {
+function Filter({ selectedCategory }) {
   let history = useHistory();
   const ads = useRef();
   const test = () => {
@@ -11,7 +11,12 @@ function Filter() {
   return (
     <div className="filter">
       <h2 className="filter__title">Kategorie</h2>
-      <select onChange={test} ref={ads} name="products">
+      <select
+        onChange={test}
+        ref={ads}
+        name="products"
+        value={selectedCategory}
+      >
         <option value="Wszystkie">Wszystkie</option>
         <option value="Koszulki">Koszulki</option>
         <option value="Bluzy">Bluzy</option>

@@ -13,7 +13,7 @@ import { auth } from "../firebase";
 
 const Toolbar = ({ drawerClickHandler }) => {
   const [{ basket, user }] = useStateValue();
-  const history = useHistory();
+
   const lengthOfBasket = Object.values(basket).reduce(
     (acc, currentValue) => acc + currentValue.counter,
     0
@@ -36,7 +36,6 @@ const Toolbar = ({ drawerClickHandler }) => {
 
         <div className="toolbar__navigation__items">
           <ul className="toolbar__navigation__link">
-            <li></li>
             {navigationMenu.map((nav) => (
               <li>
                 <NavLink exact to={nav.pathUrl}>
@@ -44,17 +43,18 @@ const Toolbar = ({ drawerClickHandler }) => {
                 </NavLink>
               </li>
             ))}
-
-            <Link
-              activeClass="active"
-              to="test1"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-            >
-              Kontakt
-            </Link>
+            <li>
+              <Link
+                activeClass="active"
+                to="test1"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Kontakt
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="spacer" />

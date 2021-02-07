@@ -8,7 +8,7 @@ import "../Components/ItemDetails.css";
 import { options } from "../../../App/Snackbar/Snackbar";
 
 function Item({ openSnackbar, closeSnackbar }) {
-  const [{ products, basket }, dispatch] = useStateValue();
+  const [{ products }, dispatch] = useStateValue();
 
   const addProduct = () => {
     openSnackbar("Dodano produkt", [700]);

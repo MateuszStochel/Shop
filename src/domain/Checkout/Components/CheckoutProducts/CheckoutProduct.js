@@ -13,7 +13,7 @@ function CheckoutProduct({ id, image, title, price, openSnackbar }) {
     openSnackbar("Dodano produkt", [700]);
     addToBasket();
   };
-  const [{ basket, products }, dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {
     dispatch({
       type: "REMOVE_FROM_BASKET",

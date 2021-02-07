@@ -71,8 +71,8 @@
   color: red;
 }
 .toolbar__optionBasket {
-  display: flex;
   position: relative;
+  display: flex;
   align-items: center;
 }
 
