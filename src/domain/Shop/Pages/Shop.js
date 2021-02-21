@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useStateValue } from "../../../App/StateProvider";
 import { useHistory } from "react-router-dom";
-
+import uniqid from "uniqid";
 import { parse } from "query-string";
 
 import Product from "../Components/Products/Product";
@@ -16,7 +16,7 @@ const filterProductsByCategory = (products, selectedCategory) => {
 
 const AllProductsView = ({ products }) =>
   Object.entries(products[0]).map((prod) => (
-    <>
+    <div key={uniqid}>
       <h2 className="shop__row__title">{prod[0]}</h2>
       <div className="shop__row">
         {prod[1].map((product) => (
@@ -30,7 +30,7 @@ const AllProductsView = ({ products }) =>
           />
         ))}
       </div>
-    </>
+    </div>
   ));
 
 const FilteredProductsView = ({ filteredProducts, selectedCategory }) => {

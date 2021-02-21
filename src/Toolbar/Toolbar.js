@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import uniqid from "uniqid";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
@@ -37,7 +37,7 @@ const Toolbar = ({ drawerClickHandler }) => {
         <div className="toolbar__navigation__items">
           <ul className="toolbar__navigation__link">
             {navigationMenu.map((nav) => (
-              <li>
+              <li key={uniqid()}>
                 <NavLink exact to={nav.pathUrl}>
                   {nav.linkName}
                 </NavLink>

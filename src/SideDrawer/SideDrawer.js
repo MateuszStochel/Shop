@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-
+import uniqid from "uniqid";
 import CloseIcon from "@material-ui/icons/Close";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
@@ -23,7 +23,7 @@ const SideDrawer = ({ show, onShow, ...props }) => {
       </div>
       <ul className="sidedrawer__links__wrapper">
         {navigationMenu.map((nav) => (
-          <li onClick={() => changeUrl(nav.pathUrl)}>
+          <li key={uniqid()} onClick={() => changeUrl(nav.pathUrl)}>
             <span>{nav.linkName}</span>
           </li>
         ))}
