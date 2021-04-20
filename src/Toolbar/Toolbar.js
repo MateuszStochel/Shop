@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink, useHistory } from "react-router-dom";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import uniqid from "uniqid";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 

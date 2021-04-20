@@ -1,5 +1,3 @@
-import { requirePropFactory } from "@material-ui/core";
-
 import React from "react";
 
 import "./DrawerToggleButton.css";

@@ -68,7 +68,7 @@ function Shop(props) {
       history.push(`/shop?kategorie=${selectedCategory}`);
     }
     setSelectedCategory(parse(props.location.search).kategorie);
-  }, [props.location.search]);
+  }, [props.location.search, getQueryParams, history, selectedCategory]);
 
   const AllProducts = useMemo(() => {
     return () => <AllProductsView products={products} />;
