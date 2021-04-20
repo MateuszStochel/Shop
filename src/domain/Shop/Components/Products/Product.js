@@ -12,7 +12,7 @@ function Product({ id, title, price, image, category, openSnackbar }) {
     openSnackbar("Dodano produkt", [700]);
     addToBasket();
   };
-  const [dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({

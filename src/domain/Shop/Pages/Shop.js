@@ -16,11 +16,12 @@ const filterProductsByCategory = (products, selectedCategory) => {
 
 const AllProductsView = ({ products }) =>
   Object.entries(products[0]).map((prod) => (
-    <div key={uniqid}>
+    <div key={uniqid()}>
       <h2 className="shop__row__title">{prod[0]}</h2>
       <div className="shop__row">
         {prod[1].map((product) => (
           <Product
+            key={uniqid()}
             category={prod[0]}
             title={product.title}
             price={product.price}
@@ -42,6 +43,7 @@ const FilteredProductsView = ({ filteredProducts, selectedCategory }) => {
           return (
             <>
               <Product
+                key={uniqid()}
                 category={selectedCategory}
                 title={product.title}
                 price={product.price}

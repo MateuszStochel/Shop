@@ -10,7 +10,6 @@ import img3 from "../../../../img/vladimir-fedotov-MPfyh3xJ1iE-unsplash.jpg";
 function SubHomeWomen() {
   const history = useHistory();
   const onCategoryClick = (category) => {
-    console.log(CategoryRoute.resolveCategoryClothes(category));
     history.push(CategoryRoute.resolveCategoryClothes(category));
   };
   return (

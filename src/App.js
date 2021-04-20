@@ -18,7 +18,7 @@ import Backdrop from "./Backdrop/Backdrop";
 import ScrollToTop from "./App/Router/ScrollToTop";
 
 function App() {
-  const [dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 
   useEffect(() => {
